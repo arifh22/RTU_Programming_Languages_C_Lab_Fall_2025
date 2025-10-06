@@ -1,40 +1,38 @@
-
-# Simple Makefile for Lab 1
 CC = gcc
 CFLAGS = -std=c11 -Wall -Wextra -Wpedantic -O2
 LDFLAGS = 
 BUILD_DIR = bin
 SRC_DIR = src
-LAB_DIR = lab3
+LAB_DIR = lab
 
-PROGRAMS = $(BUILD_DIR)/lab3_1 $(BUILD_DIR)/lab2_2 $(BUILD_DIR)/lab2_3
+PROGRAMS = $(BUILD_DIR)/labfile1 $(BUILD_DIR)/labfile2 $(BUILD_DIR)/labfile3
 
 all: $(PROGRAMS)
 
-$(BUILD_DIR)/lab3_1: $(LAB_DIR)/lab3_1.c
+$(BUILD_DIR)/labfile1: $(LAB_DIR)/labfile1.c
 	@mkdir -p $(BUILD_DIR)
 	$(CC) $(CFLAGS) $< -o $@ $(LDFLAGS)
 
-$(BUILD_DIR)/lab3_2: $(LAB_DIR)/lab3_2.c
+$(BUILD_DIR)/labfile2: $(LAB_DIR)/labfile2.c
 	@mkdir -p $(BUILD_DIR)
 	$(CC) $(CFLAGS) $< -o $@ $(LDFLAGS)
 
-$(BUILD_DIR)/lab3_3: $(LAB_DIR)/lab3_3.c
+$(BUILD_DIR)/labfile3: $(LAB_DIR)/labfile3.c
 	@mkdir -p $(BUILD_DIR)
 	$(CC) $(CFLAGS) $< -o $@ $(LDFLAGS)
 
-lab3_1: $(BUILD_DIR)/lab3_1
-lab3_2: $(BUILD_DIR)/lab3_2
-lab3_3: $(BUILD_DIR)/lab3_3
+labfile1: $(BUILD_DIR)/labfile1
+labfile2: $(BUILD_DIR)/labfile2
+labfile3: $(BUILD_DIR)/labfile3
 
-run-lab3_1: lab3_1
-	./$(BUILD_DIR)/lab3_1
+run-labfile1: labfile1
+	./$(BUILD_DIR)/labfile1
 
-run-lab3_2: lab3_2
-	./$(BUILD_DIR)/lab3_2
+run-labfile2: labfile2
+	./$(BUILD_DIR)/labfile2
 
-run-lab3_3: lab3_3
-	./$(BUILD_DIR)/lab3_3
+run-labfile3: labfile3
+	./$(BUILD_DIR)/labfile3
 
 clean:
 	rm -rf $(BUILD_DIR)/*.o $(PROGRAMS)

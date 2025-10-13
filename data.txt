@@ -1,0 +1,3 @@
+Exploring file operations in C language.
+This line is distinct, crafted for this example.
+Demonstrating reading and writing without repetition.

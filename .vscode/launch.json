@@ -1,13 +1,12 @@
-
 {
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Debug Hello (gdb)",
+      "name": "Debug week5_task1_file_io (gdb)",
       "type": "cppdbg",
       "request": "launch",
-      "program": "${workspaceFolder}/bin/hello",
-      "args": ["Alice", "42"],
+      "program": "${workspaceFolder}/bin/week5_task1_file_io",
+      "args": [],
       "stopAtEntry": false,
       "cwd": "${workspaceFolder}",
       "environment": [],
